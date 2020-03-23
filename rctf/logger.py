@@ -1,8 +1,18 @@
 #!/usr/bin/env python3
 
 import logging
+import traceback
+import sys, os, io, selectors
+import re
 
-# cool custom color logging
+
+# from: https://stackoverflow.com/a/38662876
+def strip_ansi(line):
+    ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
+    return ansi_escape.sub('', line)
+
+
+    # cool custom color logging
 
 
 class ColorLog(object):

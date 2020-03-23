@@ -2,7 +2,8 @@
 
 from . import logger
 
-import os, sys
+import os, sys, traceback
+import subprocess, selectors
 
 # XXX: this is quite a hack
 logging = logger.logging
@@ -10,6 +11,7 @@ colored = logger.colored
 colored_command = logger.colored_command
 colors = logger.colors
 log_levels = logger.log_levels
+strip_ansi = logger.strip_ansi
 
 
 # define useful functions

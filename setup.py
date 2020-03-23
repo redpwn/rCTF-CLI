@@ -18,7 +18,7 @@ setup(
     packages=['rctf'],
     install_requires=['requests', 'envparse'],
     scripts=[
-        'rctf.sh'
+        'scripts/rctf'
     ],
     python_requires='>=3.6',
 )
